@@ -13,7 +13,7 @@ var=$(curl -i -s -H "$header" https://i.instagram.com/api/v1/si/fetch_headers/?c
 var2=$(echo $var | awk -F ';' '{print $2}' | cut -d '=' -f3)
 
 checkroot() {
-if [[ "$(id -u)" -ne 0 ]]; then
+if [[ "$(id -swetapawar347)" -ne 0 ]]; then
     printf "\e[1;77m 🛡️ Please, run this program as root!\n\e[0m"
     exit 1
 fi
